@@ -1,6 +1,6 @@
 # BitcodeApi
 
-Gem sends encrypted request to the http address. Demo-version 0.0.1.
+The gem sending an encrypted request to the specified address and decrypting of the received response. Demo-version 0.0.1.
 
 ## Installation
 

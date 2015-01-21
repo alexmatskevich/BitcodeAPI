@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alexey"]
   spec.email         = ["41exmackevich@gmail.com"]
   spec.summary       = %q{Api}
-  spec.description   = %q{Gem shows current time in UTC time-zone.}
+  spec.description   = %q{The gem sending an encrypted request to the specified address and decrypting of the received response.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
