@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bitcode_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bitcode_api"
+  spec.name          = "crypt-api"
   spec.version       = BitcodeApi::VERSION
   spec.authors       = ["Alexey"]
   spec.email         = ["41exmackevich@gmail.com"]
