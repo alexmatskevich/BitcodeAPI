@@ -7,7 +7,7 @@ The gem sending an encrypted request to the specified address and decrypting of 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'crypt_api'
+gem 'crypt-api'
 ```
 
 And then execute:
@@ -30,7 +30,7 @@ CryptApi::Main.send_encrypted_request(YOUR_URL_HERE , data: {param_1: "param1", 
 
 ## Contributing
 
-1. Fork it ( https://github.com/alexmatskevich/crypt_api/fork )
+1. Fork it ( https://github.com/alexmatskevich/crypt-api/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
