@@ -24,9 +24,19 @@ Or install it yourself as:
 include CryptApi
 ```
 
-```ruby
-CryptApi::Main.send_encrypted_request(YOUR_URL_HERE , data: {param_1: "param1", param_2: "param2" })
-```
+Sending the encrypted data:
+
+  ```ruby
+  secret_data = { secret_param_1: "param1", secret_param_2: "param2" }
+  encrypted_response = CryptApi::Main.send_encrypted_request(YOUR_URL_HERE , data: secret_data, YOUR_KEY)
+  ```
+
+Decrypting of the response:
+
+  ```ruby
+   CryptApi::Main.decrypt_response(encrypted_response, YOUR_KEY)
+  ```
+
 
 ## Contributing
 

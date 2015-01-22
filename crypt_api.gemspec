@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bitcode_api/version'
+require 'crypt_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "crypt-api"
-  spec.version       = BitcodeApi::VERSION
+  spec.version       = CryptApi::VERSION
   spec.authors       = ["Alexey"]
   spec.email         = ["41exmackevich@gmail.com"]
   spec.summary       = %q{Api}
