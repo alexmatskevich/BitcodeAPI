@@ -1,4 +1,4 @@
-CryptApi.setup do |config|
+CryptApi.configurations do |config|
   
   # secret_key for encrypting data
   config.secret_key = "YOUR_SECRET_KEY"

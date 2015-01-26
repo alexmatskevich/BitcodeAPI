@@ -1,6 +1,6 @@
 # CryptApi
 
-The gem sending an encrypted request to the specified address and decrypting of the received response. Demo-version 0.0.1.
+The gem sending an encrypted request to the specified address and decrypting of the received response. Demo-version 0.1.5.
 
 ## Installation
 
@@ -28,13 +28,13 @@ Sending the encrypted data:
 
   ```ruby
   secret_data = { secret_param_1: "param1", secret_param_2: "param2" }
-  encrypted_response = CryptApi::Main.send_encrypted_request(YOUR_URL_HERE , data: secret_data, YOUR_KEY)
+  encrypted_response = CryptApi::Main.send_encrypted_request(data: secret_data)
   ```
 
 Decrypting of the response:
 
   ```ruby
-   CryptApi::Main.decrypt_response(encrypted_response, YOUR_KEY)
+   CryptApi::Main.decrypt_response(encrypted_response)
   ```
 
 

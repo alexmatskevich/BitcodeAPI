@@ -15,10 +15,14 @@ module CryptApi
     include EncryptFactory
     include Sender
 
-    def self.config
-      #TODO =>
-      # config = Configuration.new
-      # yield(config) 
+    mattr_accessor :secret_key
+    mattr_accessor :algorithm
+    mattr_accessor :make_signature
+    mattr_accessor :url
+    mattr_accessor :signature_token
+
+    def self.configurations
+      yield(self) 
     end
 
     def self.send_encrypted_request(data)
