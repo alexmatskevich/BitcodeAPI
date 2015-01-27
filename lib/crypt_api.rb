@@ -15,11 +15,11 @@ module CryptApi
     include EncryptFactory
     include Sender
 
-    mattr_accessor :secret_key
-    mattr_accessor :algorithm
-    mattr_accessor :make_signature
-    mattr_accessor :url
-    mattr_accessor :signature_token
+    cattr_accessor :secret_key
+    cattr_accessor :algorithm
+    cattr_accessor :make_signature
+    cattr_accessor :url
+    cattr_accessor :signature_token
 
     def self.configurations
       yield(self) 
