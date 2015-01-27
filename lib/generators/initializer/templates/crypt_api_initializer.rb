@@ -1,3 +1,5 @@
+require 'crypt_api'
+
 CryptApi::Main.set_configs do |config|
   
   # secret_key for encrypting data

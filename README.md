@@ -1,6 +1,6 @@
 # CryptApi
 
-The gem sending an encrypted request to the specified address and decrypting of the received response. Demo-version 0.1.5.
+The gem sending an encrypted request to the specified address and decrypting of the received response. Demo-version 0.1.9. 
 
 ## Installation
 
@@ -20,21 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-```ruby
-include CryptApi
-```
+After installation CryptApi, you need to run the generator:
+    
+    $ rails g initializer crypt_api
 
-Sending the encrypted data:
+The generator will create a file config/intializers/crypt_api.rb to set up the necessary configs.
+
+
+Now you can send encrypted data call the following method:
 
   ```ruby
-  secret_data = { secret_param_1: "param1", secret_param_2: "param2" }
-  encrypted_response = CryptApi::Main.send_encrypted_request(data: secret_data)
+    secret_data = { secret_param_1: "param1", secret_param_2: "param2" }
+    encrypted_response = CryptApi::Main.send_encrypted_request(data: secret_data)
   ```
 
-Decrypting of the response:
+And also receive and decrypt the response:
 
   ```ruby
-   CryptApi::Main.decrypt_response(encrypted_response)
+    params = {data: "encrypted_data",...}
+    CryptApi::Main.decrypt_response(params[:data])
   ```
 
 
