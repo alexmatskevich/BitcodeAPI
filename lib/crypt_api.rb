@@ -1,4 +1,4 @@
-# require "crypt_api/version"
+require "crypt_api/version"
 require "net/http"
 require 'base64'
 require 'openssl'
@@ -15,18 +15,26 @@ module CryptApi
     include EncryptFactory
     include Sender
 
-    def self.configurations
+    class << self
+      attr_accessor :secret_key, :encrypt_algorithm, :make_signature, :url, :signature_token
+    end
+
+    def self.set_configs
       yield(self) 
     end
 
     def self.send_encrypted_request(data)
-      encrypted_data = encrypt_data(data.to_s, SECRET_KEY)
-      post_data({data: encrypted_data}, URL)
+      encryptor = ApiCrypt::EncryptFactory.new
+      sender    = ApiCrypt::Sender.new
+      encrypted_data = encryptor.encrypt_data(data.to_s, self.secret_key)
+      sender.post_data({data: encrypted_data}, self.url)
     end
 
     def self.decrypt_response(encrypted_response)
-      decrypt_data(encrypted_data, SECRET_KEY)
+      decryptor = ApiCrypt::EncryptFactory.new
+      decryptor.decrypt_data(encrypted_response, self.secret_key)
     end
+
 
   end
 
