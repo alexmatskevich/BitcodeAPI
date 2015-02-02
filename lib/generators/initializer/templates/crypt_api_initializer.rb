@@ -6,7 +6,7 @@ CryptApi::Main.set_configs do |config|
   config.secret_key = "YOUR_SECRET_KEY"
 
   # algorithm for encrypting data
-  config.encrypt_algorithm = "AES-256-CBC"
+  config.encrypt_algorithm = "AES-128-CBC"
 
   # if you need signature for each request 
   config.make_signature = false 

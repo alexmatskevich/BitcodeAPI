@@ -1,7 +1,7 @@
 module EncryptFactory
   
-  def encrypt_data(data, key)
-    cipher = OpenSSL::Cipher::AES.new(128, :CBC)
+  def encrypt_data( data, key, algorithm )
+    cipher = OpenSSL::Cipher.new( algorithm )
     cipher.encrypt
     cipher.key = key
 
@@ -10,10 +10,10 @@ module EncryptFactory
     base64_encode( code )
   end
 
-  def decrypt_data( encrypted_data, key )
+  def decrypt_data( encrypted_data, key, algorithm )
     code = base64_decode( encrypted_data )
 
-    decipher = OpenSSL::Cipher::AES.new(128, :CBC)
+    decipher = OpenSSL::Cipher.new( algorithm )
     decipher.decrypt
     decipher.key = key
 
