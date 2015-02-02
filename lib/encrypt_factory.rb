@@ -11,7 +11,7 @@ module EncryptFactory
   end
 
   def decrypt_data( encrypted_data, key, algorithm )
-    code = base64_decode( encrypted_data )
+    decode = base64_decode( encrypted_data )
 
     decipher = OpenSSL::Cipher.new( algorithm )
     decipher.decrypt
