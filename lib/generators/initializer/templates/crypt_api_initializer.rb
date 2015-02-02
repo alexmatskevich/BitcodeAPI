@@ -3,7 +3,7 @@ require 'crypt_api'
 CryptApi::Main.set_configs do |config|
   
   # secret_key for encrypting data
-  config.secret_key = "YOUR_SECRET_KEY"
+  config.secret_key = "YOUR_SECRET_SECRET_KEY"
 
   # algorithm for encrypting data
   config.encrypt_algorithm = "AES-128-CBC"
