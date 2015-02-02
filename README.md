@@ -38,7 +38,7 @@ And also receive and decrypt the response:
 
   ```ruby
     params = {data: "encrypted_data",...}
-    CryptApi::Main.decrypt_response(params[:data])
+    CryptApi::Main.decrypt_response(params[:data]) # => {:data=>{:secret_param_1=>"param1", :secret_param_2=>"param2"}}
   ```
 
 
