@@ -25,12 +25,12 @@ module CryptApi
     end
 
     def self.send_encrypted_request(data)
-      encrypted_data = encrypt_data(data.to_s, self.secret_key, self.algorithm)
+      encrypted_data = encrypt_data(data.to_s, self.secret_key, self.encrypt_algorithm)
       post_data({data: encrypted_data}, self.url)
     end
 
     def self.decrypt_response(encrypted_response)
-      decrypt_data(encrypted_response, self.secret_key, self.algorithm)
+      decrypt_data(encrypted_response, self.secret_key, self.encrypt_algorithm)
     end
 
   end
